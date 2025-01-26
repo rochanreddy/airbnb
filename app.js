@@ -1,6 +1,15 @@
 if(process.env.NODE_ENV !== 'production'){
     require("dotenv").config();
 }
+const fs = require('fs');
+
+fs.readdir('./models', (err, files) => {
+  if (err) {
+    console.error("Error reading './models' directory:", err);
+  } else {
+    console.log("Files in './models':", files);
+  }
+});
 
 const express = require("express");
 const Listing = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/models/listing.js");
