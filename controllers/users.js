@@ -1,4 +1,4 @@
-const User = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/models/user.js")
+const User = require("../models/user")
 
 module.exports.renderSignup = (req,res)=>{
     res.render("users/signup.ejs");

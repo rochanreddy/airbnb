@@ -3,7 +3,6 @@ if(process.env.NODE_ENV !== 'production'){
 }
 
 const express = require("express");
-const Listing = require("../airbnb/models/listing.js");
 const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
@@ -12,13 +11,12 @@ const ejsMate = require('ejs-mate');
 const wrapAsync = require('./utils/wrapAsync.js');
 const ExpressError = require('./utils/ExpressError.js');
 const { listingSchema , reviewShema} = require("./schema.js");
-const Review = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/models/reviews.js");
 
-const listingsRoute = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/routes/listing.js");
+const listingsRoute = require("./routes/listing");
 
-const reviewsRoute = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/routes/review.js");
+const reviewsRoute = require("./routes/review");
 
-const userRoute = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/routes/user.js");
+const userRoute = require("./routes/user");
 
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
@@ -29,7 +27,7 @@ const flash= require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 
-const User= require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/models/user.js");
+const User= require("./models/user");
 
 let port = 1300;
 
