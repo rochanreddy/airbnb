@@ -3,7 +3,7 @@ if(process.env.NODE_ENV !== 'production'){
 }
 
 const express = require("express");
-const Listing = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/models/listing.js");
+const Listing = require("../airbnb/models/listing.js");
 const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
