@@ -1,7 +1,7 @@
-const Listing = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/models/listing.js");
-const Review = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/models/reviews.js");
-const { listingSchema , reviewShema} = require("C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/schema.js");
-const ExpressError = require('C:/Users/Rochan/OneDrive/Desktop/web development/airbnb/utils/ExpressError.js');
+const Listing = require("./models/listing.js");
+const Review = require("./models/reviews.js");
+const { listingSchema , reviewShema} = require("./schema.js");
+const ExpressError = require('./utils/ExpressError.js');
 
 module.exports.isLoggedIn = (req,res, next)=>{
     if(!req.isAuthenticated()){
